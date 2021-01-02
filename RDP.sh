@@ -3,7 +3,7 @@ printf "Installing RDP Be Patience... " >&2
 {
 sudo useradd -m JUMED
 sudo adduser JUMED sudo
-echo 'JUMED:8426' | sudo chpasswd
+echo 'JUMED:1234' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
@@ -18,8 +18,6 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
-sudo apt install torbrowser-launcher
-sudo snap install gimp
 sudo adduser JUMED chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
